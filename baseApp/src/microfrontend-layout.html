@@ -1,0 +1,27 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+  <nav style="position: sticky; top: 0px; left: 0; z-index: 1">
+    <application name="@zemoso/headerApp"></application>
+  </nav>
+  <main style="flex: 1">
+    <div style="margin: 20px; border-radius: 8px; background-color: #424242">
+      <route path="movies">
+        <application name="@zoho/moviesApp"></application>
+      </route>
+      <route path="web-series">
+        <application name="@zoho/moviesApp"></application>
+      </route>
+      <route default>
+        <application name="@zoho/homeApp"></application>
+      </route>
+    </div>
+  </main>
+  <footer style="margin-top: auto">
+    <application name="@zemoso/footerApp"></application>
+  </footer>
+</single-spa-router>
