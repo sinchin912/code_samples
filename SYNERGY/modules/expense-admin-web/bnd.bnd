@@ -1,0 +1,4 @@
+Bundle-Name: expense-admin-web
+Bundle-SymbolicName: com.trantoric.synergy.expense.admin.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantoric.synergy.expense.admin.web.constants

@@ -1,0 +1,10 @@
+Bundle-Name: notice-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.notice.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.notice.core.exception,\
+	com.trantorinc.synergy.notice.core.model,\
+	com.trantorinc.synergy.notice.core.service,\
+	com.trantorinc.synergy.notice.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../notice-core-service/service.xml

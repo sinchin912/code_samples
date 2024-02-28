@@ -1,0 +1,4 @@
+Bundle-Name: probation-admin-web
+Bundle-SymbolicName: com.trantorinc.synergy.probation.admin.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.probation.admin.web.constants

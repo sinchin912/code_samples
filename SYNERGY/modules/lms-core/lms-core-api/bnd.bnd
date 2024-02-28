@@ -1,0 +1,10 @@
+Bundle-Name: lms-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.lms.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.lms.core.exception,\
+	com.trantorinc.synergy.lms.core.model,\
+	com.trantorinc.synergy.lms.core.service,\
+	com.trantorinc.synergy.lms.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../lms-core-service/service.xml

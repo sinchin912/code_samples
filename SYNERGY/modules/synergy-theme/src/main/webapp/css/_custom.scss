@@ -1,0 +1,101 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+.ds_prim_nav {
+    background-color: rgba(31,31,31,0.7);
+}
+
+.ds_footer_btn {
+	border-radius: 5px;
+    padding: 7px !important;
+    color: #fff !important;
+    margin-right: 20px;
+    font-size: 1rem !important;
+    font-weight: bold;
+}
+
+.ds_banner {
+	background-color: rgba(31,31,31,0.4) !important;
+}
+
+.ds_logout {
+    color: #FFF;
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+    display: grid;
+}
+
+.ds_welcome_msg {
+	color: #fff;
+	font-weight: bold;
+	display:inline-block;
+}
+
+.ds_logout_msg {
+	color:#FFF !important;
+	text-decoration: underline;
+}
+
+#footer {
+    background-color: #30313F;
+    color: #FFF;
+}
+
+.ds_footer_icon{
+    font-size: 20px;
+    color: #2DB493;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.ds_navselected{
+    background-color: #ccc;
+    color: black !important;
+}
+
+.ds_nav{
+    color: #ccc !important;
+}
+
+.ds_bg_transparent {
+    background-color: transparent !important;
+}
+
+.ds_content_barebone {
+    border-radius: 5px;
+}
+
+.ds_content_borderless, .ds_content_decorate {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.ds_content_header{
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+}
+
+.ds_stickyfooter {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.ds-logo {
+    height:50px;
+    //width:50px;
+}
+
+.ds_admin_header {
+    background: navy !important;
+    color: white !important;
+}
+
+textarea {
+  resize: none !important;
+}

@@ -1,0 +1,4 @@
+Bundle-Name: hr-feedback-web
+Bundle-SymbolicName: com.trantorinc.synergy.hr.feedback.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.hr.feedback.web.constants

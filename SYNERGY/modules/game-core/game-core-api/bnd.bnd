@@ -1,0 +1,10 @@
+Bundle-Name: game-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.game.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.game.core.exception,\
+	com.trantorinc.synergy.game.core.model,\
+	com.trantorinc.synergy.game.core.service,\
+	com.trantorinc.synergy.game.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../game-core-service/service.xml

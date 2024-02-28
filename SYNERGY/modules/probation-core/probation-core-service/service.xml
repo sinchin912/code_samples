@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.trantorinc.synergy.probation.core">
+	<namespace>PROBATION</namespace>
+	<entity local-service="true" remote-service="false"  name="Probation"  uuid="false">
+		<column name="ecode" primary="true" type="String"  />
+		<column name="manager" type="String" />
+		<column name="reviewer" type="String"/>
+		<!--0 for pending , 1 for  confirmed, 2 for not confirmed, 3 for extended, 4 for revised , 5 for absconding -->
+		<column name="state" type="int" />
+		<column name="stateName" type="String" />
+		<column name="alertDate" type="Date" />
+		<column name="createDate" type="Date" />
+		<column name="updateDate" type="Date" />
+		<column name="areaOfStrength" type="String" />
+		<column name="areaOfImprovement" type="String" />
+		<column name="comment" type="String" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ecode" />
+		</order>
+	</entity>
+
+	<entity local-service="true" remote-service="false" name="ProbationLine"  uuid="false">
+		<column name="lineId" primary="true" type="long"  />
+		<column name="probationId" type="String" />
+		<column name="lineNumber"  type="int" />
+		<!--1 for very good, 2 - for good, 3- poor, 4- very poor , 5 na -->
+		<column name="rating" type="int" />
+		<column name="comment" type="String" />
+		<order by="asc">
+			<order-column name="lineNumber" />
+		</order>
+	</entity>
+</service-builder>

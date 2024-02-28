@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.trantorinc.synergy.expense.core.model.Expense">
+		<field name="expenseId" type="long" />
+		<field name="ecode" type="String" />
+		<field name="expenseType" type="String" />
+		<field name="totalBillAmount" type="long" />
+		<field name="assignee" type="String" />
+		<field name="managerComment" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="financeComment" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="approvingManager" type="String" />
+		<field name="status" type="int" />
+		<field name="createdDate" type="Date" />
+		<field name="managerDate" type="Date" />
+		<field name="financeDate" type="Date" />
+		<field name="fileId" type="String" />
+	</model>
+	<model name="com.trantorinc.synergy.expense.core.model.ExpenseLine">
+		<field name="lineId" type="long" />
+		<field name="expenseId" type="long" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="description" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="billAmount" type="long" />
+	</model>
+</model-hints>

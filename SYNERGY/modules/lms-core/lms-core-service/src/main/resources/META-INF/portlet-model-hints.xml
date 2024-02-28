@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.trantorinc.synergy.lms.core.model.Drive">
+		<field name="driveId" type="long" />
+		<field name="folderName" type="String" />
+		<field name="folderId" type="String" />
+		<field name="filesCount" type="int" />
+		<field name="updateDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.lms.core.model.Employee">
+		<field name="ecode" type="String" />
+		<field name="status" type="boolean" />
+		<field name="employeeType" type="String" />
+		<field name="name" type="String" />
+		<field name="doj" type="Date" />
+		<field name="dob" type="Date" />
+		<field name="email" type="String" />
+		<field name="band" type="String" />
+		<field name="designation" type="String" />
+		<field name="manager" type="String" />
+		<field name="reviewer" type="String" />
+		<field name="coordinator" type="String" />
+		<field name="account" type="String" />
+		<field name="project" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="experience" type="String" />
+		<field name="skill" type="String" />
+		<field name="location" type="String" />
+		<field name="confirmed" type="boolean" />
+		<field name="mobile" type="String" />
+		<field name="fileId" type="String" />
+		<field name="skype" type="String" />
+		<field name="lmsUser" type="boolean" />
+	</model>
+	<model name="com.trantorinc.synergy.lms.core.model.Holiday">
+		<field name="holidayId" type="long" />
+		<field name="holidayYear" type="int" />
+		<field name="onDate" type="Date" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.trantorinc.synergy.lms.core.model.Scheduler">
+		<field name="schedulerId" type="long" />
+		<field name="name" type="String" />
+		<field name="status" type="boolean" />
+		<field name="onDate" type="Date" />
+		<field name="runDate" type="Date" />
+	</model>
+</model-hints>

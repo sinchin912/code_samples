@@ -1,0 +1,10 @@
+Bundle-Name: probation-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.probation.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.probation.core.exception,\
+	com.trantorinc.synergy.probation.core.model,\
+	com.trantorinc.synergy.probation.core.service,\
+	com.trantorinc.synergy.probation.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../probation-core-service/service.xml

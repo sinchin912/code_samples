@@ -1,0 +1,4 @@
+Bundle-Name: skill-web
+Bundle-SymbolicName: com.trantorinc.synergy.skill.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.skill.web.constants

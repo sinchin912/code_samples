@@ -1,0 +1,4 @@
+Bundle-Name: holiday-web
+Bundle-SymbolicName: com.trantorinc.synergy.holiday.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.holiday.web.constants

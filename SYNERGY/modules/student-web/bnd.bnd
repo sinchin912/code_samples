@@ -1,0 +1,7 @@
+Bundle-Name: student-web
+Bundle-SymbolicName: com.training.student
+Bundle-Version: 1.0.0
+Export-Package: com.training.student.constants
+Export-Package: com.training.student.portlet
+Web-ContextPath: /student-data
+

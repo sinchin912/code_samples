@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:notice-core:notice-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../notice-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.notice.core"

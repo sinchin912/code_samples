@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.trantorinc.synergy.game.core.model.GameTimeline">
+		<field name="name" type="String" />
+		<field name="openDate" type="Date" />
+		<field name="freezeDate" type="Date" />
+		<field name="actionDate" type="Date" />
+		<field name="closeDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.game.core.model.Prize">
+		<field name="prizeId" type="long" />
+		<field name="year" type="int" />
+		<field name="sequence" type="int" />
+		<field name="description" type="String" />
+		<field name="winner" type="String" />
+		<field name="ticketId" type="long" />
+		<field name="surprise" type="boolean" />
+		<field name="fileId" type="String" />
+	</model>
+	<model name="com.trantorinc.synergy.game.core.model.Santa">
+		<field name="santaId" type="long" />
+		<field name="year" type="int" />
+		<field name="ecode" type="String" />
+		<field name="mobile" type="String" />
+		<field name="city" type="String" />
+		<field name="state" type="String" />
+		<field name="pincode" type="String" />
+		<field name="postalAddress" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="santaEcode" type="String" />
+		<field name="guessedEcode" type="String" />
+		<field name="giftSent" type="boolean" />
+		<field name="emailSent" type="boolean" />
+		<field name="fileId" type="String" />
+		<field name="createDatetime" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.game.core.model.Ticket">
+		<field name="ticketId" type="long" />
+		<field name="year" type="int" />
+		<field name="ecode" type="String" />
+		<field name="ticketNumber" type="String" />
+		<field name="createDatetime" type="Date" />
+		<field name="draw" type="boolean" />
+	</model>
+</model-hints>

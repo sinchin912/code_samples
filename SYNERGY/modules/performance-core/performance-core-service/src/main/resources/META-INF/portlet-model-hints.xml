@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.trantorinc.synergy.performance.core.model.Kpi">
+		<field name="kpiId" type="long" />
+		<field name="ecode" type="String" />
+		<field name="account" type="String" />
+		<field name="managerEmail" type="String" />
+		<field name="reviewerEmail" type="String" />
+		<field name="accountPrimary" type="boolean" />
+		<field name="updateDate" type="Date" />
+		<field name="kpiSettingStatus" type="boolean" />
+		<field name="rejectionComment" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.KpiGuide">
+		<field name="guideId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="attribute" type="boolean" />
+		<field name="other" type="boolean" />
+		<field name="mandatory" type="boolean" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.KpiLine">
+		<field name="lineId" type="long" />
+		<field name="kpiId" type="long" />
+		<field name="guideId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="target" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.Review">
+		<field name="reviewId" type="long" />
+		<field name="kpiId" type="long" />
+		<field name="ecode" type="String" />
+		<field name="account" type="String" />
+		<field name="manager" type="String" />
+		<field name="assignee" type="String" />
+		<field name="assigned" type="boolean" />
+		<field name="reviewStartDate" type="Date" />
+		<field name="reviewState" type="int" />
+		<field name="accountPrimary" type="boolean" />
+		<field name="finalYearReview" type="boolean" />
+		<field name="comment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="employeeComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="managerComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="improvementComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="hrComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="rating" type="String" />
+		<field name="achievements" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="trainings" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="excelledArea" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="rolePlayed" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="expectedDesignation" type="String" />
+		<field name="expectedSalary" type="String" />
+		<field name="readyReason" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="reasonRecommendation" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="promotionRecommendation" type="boolean" />
+		<field name="criticalToAccount" type="int" />
+		<field name="criticalToCompany" type="int" />
+		<field name="replacement" type="int" />
+		<field name="replacementDetail" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="replacementReason" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="replacementReasonOther" type="boolean" />
+		<field name="stage1Date" type="Date" />
+		<field name="stage2Date" type="Date" />
+		<field name="stage3Date" type="Date" />
+		<field name="stage4Date" type="Date" />
+		<field name="stage5Date" type="Date" />
+		<field name="firstSubmit" type="boolean" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.ReviewClose">
+		<field name="closeId" type="long" />
+		<field name="reviewId" type="long" />
+		<field name="requestBy" type="String" />
+		<field name="requestDate" type="Date" />
+		<field name="actionDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.ReviewComment">
+		<field name="commentId" type="long" />
+		<field name="reviewId" type="long" />
+		<field name="author" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="createdDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.ReviewLine">
+		<field name="lineId" type="long" />
+		<field name="reviewId" type="long" />
+		<field name="guideId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="target" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="employeeRating" type="String" />
+		<field name="employeeComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="managerRating" type="String" />
+		<field name="managerComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="hrRating" type="String" />
+		<field name="hrComment" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.ReviewRollback">
+		<field name="rollbackId" type="long" />
+		<field name="reviewId" type="long" />
+		<field name="requestBy" type="String" />
+		<field name="requestDate" type="Date" />
+		<field name="actionDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.ReviewTimeline">
+		<field name="timelineId" type="long" />
+		<field name="reviewState" type="int" />
+		<field name="stateName" type="String" />
+		<field name="endDate" type="Date" />
+		<field name="finalYear" type="boolean" />
+	</model>
+	<model name="com.trantorinc.synergy.performance.core.model.ReviewUpload">
+		<field name="uploadId" type="long" />
+		<field name="reviewId" type="long" />
+		<field name="attachmentName" type="String" />
+		<field name="fileId" type="String" />
+		<field name="createdDate" type="Date" />
+	</model>
+</model-hints>

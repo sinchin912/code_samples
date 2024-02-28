@@ -1,0 +1,4 @@
+Bundle-Name: notice-web
+Bundle-SymbolicName: com.trantorinc.synergy.notice.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.notice.web.constants

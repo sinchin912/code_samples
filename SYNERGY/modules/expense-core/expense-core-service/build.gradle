@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:expense-core:expense-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../expense-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.expense.core"

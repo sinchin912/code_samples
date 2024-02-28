@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.trantorinc.synergy.performance.core">
+	<namespace>PERFORMANCE</namespace>
+
+	<entity local-service="true" remote-service="false"  name="KpiGuide"  uuid="false">
+		<column name="guideId" primary="true" type="long"  />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="attribute" type="boolean" />
+		<column name="other" type="boolean" />
+		<column name="mandatory" type="boolean" />
+	</entity>
+
+	<entity local-service="true" remote-service="false" name="Kpi"  uuid="false">
+		<column name="kpiId" primary="true" type="long"  />
+		<column name="ecode"  type="String" />
+		<column name="account"  type="String" />
+		<column name="managerEmail"  type="String" />
+		<column name="reviewerEmail"  type="String" />
+		<column name="accountPrimary" type="boolean" />
+		<column name="updateDate" type="Date" />
+		<column name="kpiSettingStatus" type="boolean" />
+		<column name="rejectionComment"  type="String" />
+	</entity>
+
+	<entity local-service="true" remote-service="false"   name="KpiLine"  uuid="false">
+		<column name="lineId" primary="true" type="long"  />
+		<column name="kpiId"  type="long" />
+		<column name="guideId"  type="long" />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="target" type="String" />
+		<column name="createDate" type="Date" />
+	</entity>
+
+	<entity local-service="true" remote-service="false" name="ReviewTimeline"  uuid="false">
+		<column name="timelineId" type="long" primary="true" />
+		<column name="reviewState" type="int" />
+		<column name="stateName" type="String" />
+		<column name="endDate" type="Date" />
+		<column name="finalYear" type="boolean" />
+	</entity>
+
+	<entity local-service="true" remote-service="false" name="Review"  uuid="false">
+		<column name="reviewId" primary="true" type="long" id-type="increment" />
+		<column name="kpiId" type="long"  />
+		<column name="ecode" type="String" />
+		<column name="account" type="String" />
+		<column name="manager" type="String" />
+		<column name="assignee" type="String" />
+		<column name="assigned" type="boolean" />
+		<column name="reviewStartDate" type="Date" />
+		<column name="reviewState" type="int" />
+		<column name="accountPrimary" type="boolean" />
+		<column name="finalYearReview" type="boolean" />
+		<column name="comment" type="String" />
+		<column name="employeeComment" type="String" />
+		<column name="managerComment" type="String" />
+		<column name="improvementComment" type="String" />
+		<column name="hrComment" type="String" />
+		<column name="rating" type="String" />
+		<column name="achievements" type="String" />
+		<column name="trainings" type="String" />
+		<column name="excelledArea" type="String" />
+		<column name="rolePlayed" type="String" />
+		<column name="expectedDesignation" type="String" />
+		<column name="expectedSalary" type="String" />
+		<column name="readyReason" type="String" />
+		<column name="reasonRecommendation" type="String" />
+		<column name="promotionRecommendation" type="boolean" />
+		<column name="criticalToAccount" type="int" />
+		<column name="criticalToCompany" type="int" />
+		<column name="replacement" type="int" />
+		<column name="replacementDetail" type="String" />
+		<column name="replacementReason" type="String" />
+		<column name="replacementReasonOther" type="boolean" />
+		<column name="stage1Date" type="Date" />
+		<column name="stage2Date" type="Date" />
+		<column name="stage3Date" type="Date" />
+		<column name="stage4Date" type="Date" />
+		<column name="stage5Date" type="Date" />
+		<column name="firstSubmit" type="boolean" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="reviewId" />
+		</order>
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="ReviewLine"  uuid="false">
+		<column name="lineId" primary="true" type="long"  />
+		<column name="reviewId"  type="long" />
+		<column name="guideId"  type="long" />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="target" type="String" />
+		<column name="employeeRating" type="String" />
+		<column name="employeeComment" type="String" />
+		<column name="managerRating" type="String" />
+		<column name="managerComment" type="String" />
+		<column name="hrRating" type="String" />
+		<column name="hrComment" type="String" />
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="ReviewUpload"  uuid="false">
+		<column name="uploadId"  primary="true" type="long" />
+		<column name="reviewId"  type="long" />
+		<column name="attachmentName"  type="String" />
+		<column name="fileId" type="String" />
+		<column name="createdDate" type="Date" />
+	</entity>
+
+	<entity local-service="true" remote-service="false" name="ReviewComment"  uuid="false">
+		<column name="commentId"  primary="true" type="long" />
+		<column name="reviewId"  type="long" />
+		<column name="author"  type="String" />
+		<column name="description" type="String" />
+		<column name="createdDate" type="Date" />
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="ReviewRollback"  uuid="false">
+		<column name="rollbackId" primary="true" type="long"  />
+		<column name="reviewId"  type="long" />
+		<column name="requestBy"  type="String" />
+		<column name="requestDate" type="Date" />
+		<column name="actionDate" type="Date" />
+		<column name="status" type="int" />
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="ReviewClose"  uuid="false">
+		<column name="closeId" primary="true" type="long"  />
+		<column name="reviewId"  type="long" />
+		<column name="requestBy"  type="String" />
+		<column name="requestDate" type="Date" />
+		<column name="actionDate" type="Date" />
+		<column name="status" type="int" />
+	</entity>
+
+</service-builder>

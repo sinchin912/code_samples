@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.trantorinc.synergy.email.core">
+	<namespace>EMAIL</namespace>
+	<entity local-service="true" remote-service="false" name="Email"  uuid="false">
+		<column name="emailId" primary="true" type="long" id-type="increment" />
+		<column name="scheduled" type="boolean" />
+		<column name="module" type="String" />
+		<column name="toAddress" type="String" />
+		<column name="ccAddress" type="String" />
+		<column name="bccAddress" type="String" />
+		<column name="subject" type="String" />
+		<column name="body" type="String" />
+		<column name="createdDate" type="Date"/>
+		<column name="sent" type="boolean" />
+		<order by="asc">
+			<order-column name="emailId" />
+		</order>
+	</entity>
+	<entity local-service="true" remote-service="false" name="EmailAttachment"  uuid="false">
+		<column name="emailAttachmentId" primary="true" type="long" id-type="increment" />
+		<column name="emailId" type="long" />
+		<column name="attachmentName"  type="String" />
+		<column name="attachmentFileId" type="String" />
+		<order by="asc">
+			<order-column name="emailAttachmentId" />
+		</order>
+	</entity>
+</service-builder>

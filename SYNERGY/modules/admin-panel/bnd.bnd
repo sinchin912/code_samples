@@ -1,0 +1,4 @@
+Bundle-Name: admin-panel
+Bundle-SymbolicName: com.trantorinc.synergy.admin.panel
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.admin.panel.constants

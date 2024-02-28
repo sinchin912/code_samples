@@ -1,0 +1,64 @@
+Bundle-Name: common-service
+Bundle-SymbolicName: com.trantorinc.synergy.common.service
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.common.service.constant,com.trantorinc.synergy.common.service.util,com.trantorinc.synergy.common.service.drive,com.trantorinc.synergy.common.service.pdf,com.trantorinc.synergy.common.service.excel,com.trantorinc.synergy.common.service.dto,com.trantorinc.synergy.common.service.ldap
+-fixupmessages "Classes found in the wrong directory"; restrict:=error; is:=warning
+Import-Package: \
+ !org.apache.jcp.xml.dsig.internal.dom,\
+ !org.apache.poi.generator,\
+ !org.apache.poi.hssf.record.crypto,\
+ !org.apache.poi.hssf.usermodel,\
+ !org.bouncycastle.*,\
+ !org.apache.poi.openxml4j.exceptions,\
+ !org.apache.poi.openxml4j.opc,\
+ !org.apache.poi.poifs.filesystem,\
+ !org.apache.poi.util,\
+ !com.microsoft.schemas.*,\
+ !org.apache.commons.collections4,\
+ !org.apache.commons.collections4.multimap,\
+ !org.apache.poi.common.usermodel,\
+ !org.apache.poi.hpsf,\
+ !org.apache.poi.hssf.util,\
+ !org.apache.poi.openxml4j.opc.internal,\
+ !org.apache.poi.openxml4j.util,\
+ !org.apache.poi.poifs.crypt,\
+ !org.apache.poi.ss,\
+ !org.apache.poi.ss.formula,\
+ !org.apache.poi.ss.formula.*,\
+ !org.apache.poi.ss.usermodel.charts,\
+ !org.apache.poi.ss.util,\
+ !org.apache.poi.xssf,\
+ !org.apache.poi.xssf.model,\
+ !org.apache.poi.xssf.usermodel.*,\
+ !org.apache.xml.security.utils,\
+ !org.apache.xmlbeans,\
+ !org.apache.xmlbeans,\
+ !org.apache.xmlbeans.*,\
+ !org.openxmlformats.schemas.*,\
+ !com.sun.*,\
+ !junit.framework,\
+ !org.apache.poi.hsmf,\
+ !org.apache.poi.hsmf.*,\
+ !org.junit,\
+ !org.apache.tools.*,\
+ !org.apache.poi.hwpf.*,\
+ !org.apache.xml.*,\
+ !org.etsi.*,\
+ !org.junit.*,\
+ !com.apple.*,\
+ !com.lowagie.*,\
+ !javax.annotation.*,\
+ !com.google.api.client.auth.*  ,\
+ !org.apache.avalon.framework.*  ,\
+ !org.apache.log.* ,\
+ !com.github.* ,\
+ !de.rototor.pdfbox.* ,\
+ !net.sf.* ,\
+ !org.apache.batik.* ,\
+ !org.apache.maven.* ,\
+ !org.brotli.* ,\
+ !org.ietf.* ,\
+ !org.objectweb.* ,\
+ !org.tukaani.* ,\
+ !org.w3c.dom.svg ,\
+ *

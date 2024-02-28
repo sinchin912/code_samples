@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.trantorinc.synergy.notice.core.model.AdminForm">
+		<field name="id" type="long" />
+		<field name="exitId" type="long" />
+		<field name="stationaryRecoveryAmt" type="String" />
+		<field name="stationaryRecoveryAmtStatus" type="int" />
+		<field name="stationaryRecoveryApproved" type="boolean" />
+		<field name="stationaryRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="keysRecoveryAmt" type="String" />
+		<field name="keysRecoveryAmtStatus" type="int" />
+		<field name="keyRecoveryApproved" type="boolean" />
+		<field name="keyRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="libraryRecoveryAmt" type="String" />
+		<field name="libraryRecoveryAmtStatus" type="int" />
+		<field name="libraryRecoveryApproved" type="boolean" />
+		<field name="libraryRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="sportsRecoveryAmt" type="String" />
+		<field name="sportsRecoveryAmtStatus" type="int" />
+		<field name="sportsRecoveryApproved" type="boolean" />
+		<field name="sportsRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="infraRecoveryAmt" type="String" />
+		<field name="infraRecoveryAmtStatus" type="int" />
+		<field name="infraRecoveryApproved" type="boolean" />
+		<field name="infraRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="lunchRecoveryAmt" type="String" />
+		<field name="lunchRecoveryAmtStatus" type="int" />
+		<field name="lunchRecoveryApproved" type="boolean" />
+		<field name="lunchRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="accessCardRecoveryAmt" type="String" />
+		<field name="accessCardRecoveryAmtStatus" type="int" />
+		<field name="accessCardRecoveryApproved" type="boolean" />
+		<field name="accessCardRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="identityCardRecoveryAmt" type="String" />
+		<field name="identityCardRecoveryStatus" type="int" />
+		<field name="identityCardRecoveryApproved" type="boolean" />
+		<field name="identityCardRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="updatedDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.ExitForm">
+		<field name="id" type="long" />
+		<field name="resignationId" type="long" />
+		<field name="managerFormStatus" type="boolean" />
+		<field name="hrFormStatus" type="boolean" />
+		<field name="itFormStatus" type="boolean" />
+		<field name="adminFormStatus" type="boolean" />
+		<field name="financeFormStatus" type="boolean" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.ExitState">
+		<field name="exitStateId" type="long" />
+		<field name="exitStateKey" type="int" />
+		<field name="exitStateDescription" type="String" />
+		<field name="exitStateDisplay" type="String" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.FinanceForm">
+		<field name="id" type="long" />
+		<field name="exitId" type="long" />
+		<field name="lastSalaryPaidDays" type="long" />
+		<field name="lastSalaryPaidMonth" type="String" />
+		<field name="lastSalaryPaidYear" type="String" />
+		<field name="taxProofStatus" type="int" />
+		<field name="taxProofRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="foodReimbursementStatus" type="int" />
+		<field name="foodReimbursementAmt" type="String" />
+		<field name="travelRecoveryAmt" type="String" />
+		<field name="travelRecoveryStatus" type="int" />
+		<field name="travelRecoveryApproved" type="boolean" />
+		<field name="travelRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="hotelRecoveryAmt" type="String" />
+		<field name="hotelRecoveryStatus" type="int" />
+		<field name="hotelRecoveryApproved" type="boolean" />
+		<field name="hotelRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="internationalRecoveryAmt" type="String" />
+		<field name="internationalRecoveryStatus" type="int" />
+		<field name="internationalRecoveryApproved" type="boolean" />
+		<field name="internationalRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="educationRecoveryAmt" type="String" />
+		<field name="educationRecoveryStatus" type="int" />
+		<field name="educationRecoveryApproved" type="boolean" />
+		<field name="educationRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="joiningBonusRecoveryAmt" type="String" />
+		<field name="joiningBonusRecoveryStatus" type="int" />
+		<field name="joiningRecoveryApproved" type="boolean" />
+		<field name="joiningRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="noticePeriodRecoveryAmt" type="String" />
+		<field name="noticePeriodRecoveryStatus" type="int" />
+		<field name="noticePeriodRecoveryApproved" type="boolean" />
+		<field name="noticePeriodRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="updatedDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.HrForm">
+		<field name="id" type="long" />
+		<field name="exitId" type="long" />
+		<field name="foodOption" type="long" />
+		<field name="foodOptionRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="inductionFeedbackStatus" type="int" />
+		<field name="inductionFeedbackRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="inductionQuizStatus" type="int" />
+		<field name="inductionQuizRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="trainingFeedbackStatus" type="int" />
+		<field name="trainingFeedbackRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="exitInterviewStatus" type="int" />
+		<field name="exitInterviewRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="employeeDirectoryStatus" type="int" />
+		<field name="employeeDirectoryRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="lmsStatus" type="int" />
+		<field name="lmsRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="vantageCircleStatus" type="int" />
+		<field name="vantageCircleRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="birthdaySynergyStatus" type="int" />
+		<field name="birthdaySynergyRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="experienceLetterStatus" type="int" />
+		<field name="experienceLetterRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="ndaFormStatus" type="int" />
+		<field name="ndaFormRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="separationDocumentStatus" type="int" />
+		<field name="separationDocumentRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="trainingAgreementAmt" type="String" />
+		<field name="trainingAgreementStatus" type="int" />
+		<field name="recoverableBonusAmt" type="String" />
+		<field name="recoverableBonusStatus" type="int" />
+		<field name="noticePeriodRecoveryAmt" type="String" />
+		<field name="noticePeriodRecoveryStatus" type="int" />
+		<field name="leavesMonth1" type="String" />
+		<field name="leaveDaysMonth1" type="String" />
+		<field name="leaveDateMonth1" type="String" />
+		<field name="leavesMonth2" type="String" />
+		<field name="leaveDaysMonth2" type="String" />
+		<field name="leaveDateMonth2" type="String" />
+		<field name="leavesMonth3" type="String" />
+		<field name="leaveDaysMonth3" type="String" />
+		<field name="leaveDateMonth3" type="String" />
+		<field name="lopMonth1" type="String" />
+		<field name="lopDaysMonth1" type="String" />
+		<field name="lopDateMonth1" type="String" />
+		<field name="lopMonth2" type="String" />
+		<field name="lopDaysMonth2" type="String" />
+		<field name="lopDateMonth2" type="String" />
+		<field name="lopMonth3" type="String" />
+		<field name="lopDaysMonth3" type="String" />
+		<field name="lopDateMonth3" type="String" />
+		<field name="earnedLeaveBalance" type="String" />
+		<field name="hrRemark" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="updatedDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.ItForm">
+		<field name="id" type="long" />
+		<field name="exitId" type="long" />
+		<field name="ticketNo" type="int" />
+		<field name="ticketNoRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="mailPst" type="int" />
+		<field name="mailPstRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="downloadFolder" type="int" />
+		<field name="downloadFolderRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="documentFolder" type="int" />
+		<field name="documentFolderRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="otherData" type="int" />
+		<field name="otherDataRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="googleDrive" type="int" />
+		<field name="googleDriveRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="others" type="int" />
+		<field name="othersRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="mailForwarding" type="int" />
+		<field name="mailForwardingRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="emailDisable" type="int" />
+		<field name="emailDisableRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="systemRecovered" type="int" />
+		<field name="systemRecoveredRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="clientSystemRecovered" type="int" />
+		<field name="clientSystemRecoveredRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="accessCardDisable" type="int" />
+		<field name="accessCardDisableRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="separationDocument" type="int" />
+		<field name="separationDocumentRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="systemRecoveryAmt" type="String" />
+		<field name="systemRecoveryAmtStatus" type="int" />
+		<field name="systemRecoveryApproved" type="boolean" />
+		<field name="systemRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="laptopRecoveryAmt" type="String" />
+		<field name="laptopRecoveryAmtStatus" type="int" />
+		<field name="laptopRecoveryApproved" type="boolean" />
+		<field name="laptopRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="communicationRecoveryAmt" type="String" />
+		<field name="communicationRecoveryStatus" type="int" />
+		<field name="communicationRecoveryApproved" type="boolean" />
+		<field name="communicationRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="headphoneRecoveryAmt" type="String" />
+		<field name="headphoneRecoveryAmtStatus" type="int" />
+		<field name="headphoneRecoveryApproved" type="boolean" />
+		<field name="headphoneRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="laptopBagRecoveryAmt" type="String" />
+		<field name="laptopBagRecoveryAmtStatus" type="int" />
+		<field name="laptopBagRecoveryApproved" type="boolean" />
+		<field name="laptopBagRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="monitorRecoveryAmt" type="String" />
+		<field name="monitorRecoveryAmtStatus" type="int" />
+		<field name="monitorRecoveryApproved" type="boolean" />
+		<field name="monitorRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="chargerRecoveryAmt" type="String" />
+		<field name="chargerRecoveryAmtStatus" type="int" />
+		<field name="chargerRecoveryApproved" type="boolean" />
+		<field name="chargerRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="mouseRecoveryAmt" type="String" />
+		<field name="mouseRecoveryAmtStatus" type="int" />
+		<field name="mouseRecoveryApproved" type="boolean" />
+		<field name="mouseRecoveryComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="updatedDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.ManagerForm">
+		<field name="id" type="long" />
+		<field name="exitId" type="long" />
+		<field name="ticketNo" type="int" />
+		<field name="ticketNoRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="separationDocument" type="int" />
+		<field name="separationDocumentRemark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="updatedDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.QuestionnaireForm">
+		<field name="id" type="long" />
+		<field name="resignationId" type="long" />
+		<field name="workExperience" type="String" />
+		<field name="communicationWithEmployees" type="String" />
+		<field name="trainingOpportunity" type="String" />
+		<field name="dealingWithStaff" type="String" />
+		<field name="satisfactionLevel" type="String" />
+		<field name="reasonForLeaving" type="String" />
+		<field name="reasonForLeavingDescribe" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="reasonForJoining" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="workAgain" type="int" />
+		<field name="notWorkAgain" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="recommendTrantor" type="int" />
+		<field name="notRecommendTrantor" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="companyName" type="String" />
+		<field name="companyDetails" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="designation" type="String" />
+		<field name="location  " type="String" />
+		<field name="salaryHike" type="String" />
+		<field name="feedback " type="String" />
+		<field name="hrRemark" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="submittedDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.RecoveryReimbursement">
+		<field name="id" type="long" />
+		<field name="departmentFormId" type="long" />
+		<field name="department" type="int" />
+		<field name="recoveryType" type="boolean" />
+		<field name="recoveryItem" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="recoveryAmount" type="String" />
+		<field name="recoveryStatus" type="int" />
+		<field name="reimbursementItem" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="reimbursementAmount" type="String" />
+		<field name="reimbursementStatus" type="int" />
+		<field name="approved" type="boolean" />
+		<field name="comment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+	</model>
+	<model name="com.trantorinc.synergy.notice.core.model.Resignation">
+		<field name="id" type="long" />
+		<field name="ecode" type="String" />
+		<field name="account" type="String" />
+		<field name="managerEmail" type="String" />
+		<field name="assigneeEmail" type="String" />
+		<field name="assigneeTo" type="boolean" />
+		<field name="alternateEmail" type="String" />
+		<field name="stateName" type="String" />
+		<field name="cityName" type="String" />
+		<field name="pincode" type="String" />
+		<field name="postalAddress" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="reason" type="String" />
+		<field name="lastWorkingDate" type="Date" />
+		<field name="managerSubmissionDate" type="Date" />
+		<field name="hrSubmissionDate" type="Date" />
+		<field name="withdrawInitiatedDate" type="Date" />
+		<field name="abscondTerminateDate" type="Date" />
+		<field name="separationType" type="String" />
+		<field name="keyToCompany" type="String" />
+		<field name="keyToProject" type="String" />
+		<field name="rating" type="String" />
+		<field name="clientImpact" type="String" />
+		<field name="keyToRetention" type="String" />
+		<field name="reasonNonRetention" type="String" />
+		<field name="employeeComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="hrComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="managerComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="empWithdrawComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="hrWithdrawComment" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="reasonForLeaving" type="String" />
+		<field name="reasonForLeavingByHr" type="String" />
+		<field name="eligibleForRehire" type="String" />
+		<field name="otherIssue" type="String" />
+		<field name="replacementPlan" type="String" />
+		<field name="replacementDetail" type="String" />
+		<field name="status" type="int" />
+		<field name="terminationType" type="String" />
+		<field name="creationDate" type="Date" />
+		<field name="initiatedDate" type="Date" />
+		<field name="mobile" type="String" />
+		<field name="noticePeriod" type="String" />
+		<field name="itAssetsSubmissionDate" type="Date" />
+		<field name="retainEmployeeDate" type="Date" />
+		<field name="hasLaptop" type="String" />
+		<field name="hasMouse" type="String" />
+		<field name="hasCharger" type="String" />
+		<field name="hasHeadSet" type="String" />
+		<field name="hasLaptopBag" type="String" />
+		<field name="hasHomeDesktop" type="String" />
+		<field name="hasHomeMonitor" type="String" />
+		<field name="otherAssetsList" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="exitQuestionnaire" type="boolean" />
+		<field name="withdrawCount" type="int" />
+	</model>
+</model-hints>

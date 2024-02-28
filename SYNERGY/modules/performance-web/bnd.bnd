@@ -1,0 +1,4 @@
+Bundle-Name: performance-web
+Bundle-SymbolicName: com.trantorinc.synergy.performance.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.performance.web.constants

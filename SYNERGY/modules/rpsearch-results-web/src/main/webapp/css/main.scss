@@ -1,0 +1,26 @@
+#view-order-by-status .inline_table .table_accourdian .caret.rotate-icon
+	{
+	transform: rotateZ(-180deg);
+}
+.link-faq i {
+    font-size: 18px;
+    float: left;
+    padding-top: 2px;
+    padding-left: 8px;
+}
+
+.link-faq b {
+    float: left;
+}
+
+.rep-user-total td {
+    padding: 0px !important;
+    vertical-align: middle !important;
+}
+
+.rep-invoice-total td{
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 0px !important;
+    vertical-align: middle !important;
+}

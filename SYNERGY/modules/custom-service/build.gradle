@@ -1,0 +1,14 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+
+	compileInclude group: 'commons-io', name: 'commons-io', version: '2.12.0'
+	compileOnly group: 'javax.mail', name: 'mail', version: '1.4.1'
+	compileInclude files('src/main/resources/lib/mssql-jdbc-10.2.0.jre8.jar')
+	compileOnly project(":modules:email-core:email-core-api")
+	compileOnly project(":modules:lms-core:lms-core-api")
+	compileOnly project(":modules:common-service")
+	compileOnly project(":modules:game-core:game-core-api")
+	compileOnly project(":modules:probation-core:probation-core-api")
+	compileOnly project(":modules:skill-core:skill-core-api")
+	compileOnly project(":modules:performance-core:performance-core-api")
+}

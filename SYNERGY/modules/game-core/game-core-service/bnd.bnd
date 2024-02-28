@@ -1,0 +1,6 @@
+Bundle-Name: game-core-service
+Bundle-SymbolicName: com.trantorinc.synergy.game.core.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit

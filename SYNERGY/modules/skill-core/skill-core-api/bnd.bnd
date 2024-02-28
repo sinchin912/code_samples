@@ -1,0 +1,10 @@
+Bundle-Name: skill-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.skill.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.skill.core.exception,\
+	com.trantorinc.synergy.skill.core.model,\
+	com.trantorinc.synergy.skill.core.service,\
+	com.trantorinc.synergy.skill.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../skill-core-service/service.xml

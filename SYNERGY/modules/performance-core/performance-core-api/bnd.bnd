@@ -1,0 +1,10 @@
+Bundle-Name: performance-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.performance.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.performance.core.exception,\
+	com.trantorinc.synergy.performance.core.model,\
+	com.trantorinc.synergy.performance.core.service,\
+	com.trantorinc.synergy.performance.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../performance-core-service/service.xml

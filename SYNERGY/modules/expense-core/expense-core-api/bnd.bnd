@@ -1,0 +1,10 @@
+Bundle-Name: expense-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.expense.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.expense.core.exception,\
+	com.trantorinc.synergy.expense.core.model,\
+	com.trantorinc.synergy.expense.core.service,\
+	com.trantorinc.synergy.expense.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../expense-core-service/service.xml

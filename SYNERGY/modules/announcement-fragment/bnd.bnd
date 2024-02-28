@@ -1,0 +1,5 @@
+Bundle-Name: announcement-fragment
+Bundle-SymbolicName: announcement.fragment
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.announcements.web;bundle-version="6.0.47"
+Portal-Bundle-Version: 7.4.3.73

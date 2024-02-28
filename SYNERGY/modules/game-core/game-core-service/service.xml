@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.trantorinc.synergy.game.core">
+	<namespace>GAME</namespace>
+
+	<entity local-service="true" remote-service="false"  name="GameTimeline"  uuid="false">
+		<column name="name" type="String" primary="true" />
+		<column name="openDate" type="Date" />
+		<column name="freezeDate" type="Date" />
+		<column name="actionDate" type="Date" />
+		<column name="closeDate" type="Date" />
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="Prize"  uuid="false">
+		<column name="prizeId" primary="true" type="long"  />
+		<column name="year" type="int" />
+		<column name="sequence" type="int" />
+		<column name="description" type="String" />
+		<column name="winner" type="String" />
+		<column name="ticketId" type="long" />
+		<column name="surprise" type="boolean" />
+		<column name="fileId" type="String" />
+		<order by="asc">
+			<order-column name="prizeId" />
+		</order>
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="Ticket"  uuid="false">
+		<column name="ticketId" primary="true" type="long"  />
+		<column name="year" type="int" />
+		<column name="ecode" type="String" />
+		<column name="ticketNumber" type="String" />
+		<column name="createDatetime" type="Date"/>
+		<column name="draw" type="boolean"/>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ecode" />
+		</order>
+	</entity>
+
+	<entity local-service="true" remote-service="false"  name="Santa"  uuid="false">
+		<column name="santaId" primary="true" type="long"  />
+		<column name="year"  type="int" />
+		<column name="ecode"  type="String" />
+		<column name="mobile" type="String" />
+		<column name="city" type="String" />
+		<column name="state" type="String" />
+		<column name="pincode" type="String" />
+		<column name="postalAddress" type="String" />
+		<column name="santaEcode" type="String" />
+		<column name="guessedEcode" type="String" />
+		<column name="giftSent" type="boolean" />
+		<column name="emailSent" type="boolean" />
+		<column name="fileId" type="String" />
+		<column name="createDatetime" type="Date" />
+	</entity>
+
+</service-builder>

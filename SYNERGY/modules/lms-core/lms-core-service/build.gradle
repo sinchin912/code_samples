@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:lms-core:lms-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../lms-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.lms.core"

@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:probation-core:probation-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../probation-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.probation.core"

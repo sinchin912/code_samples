@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.trantorinc.synergy.skill.core.model.Certificate">
+		<field name="certificateId" type="long" />
+		<field name="ecode" type="String" />
+		<field name="name" type="String" />
+		<field name="category" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="fileId" type="String" />
+		<field name="filename" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="expiryDate" type="Date" />
+	</model>
+	<model name="com.trantorinc.synergy.skill.core.model.Skill">
+		<field name="skillId" type="long" />
+		<field name="ecode" type="String" />
+		<field name="project" type="String" />
+		<field name="coreSkill" type="String" />
+		<field name="subSkill" type="String" />
+		<field name="tool" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="validity" type="String" />
+		<field name="version" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="status" type="int" />
+		<field name="reviewer" type="String" />
+		<field name="manager" type="String" />
+		<field name="primarySkill" type="boolean" />
+		<field name="proficiencyLevel" type="int" />
+		<field name="requiredLevel" type="int" />
+	</model>
+	<model name="com.trantorinc.synergy.skill.core.model.SkillGuide">
+		<field name="guideId" type="long" />
+		<field name="coreSkill" type="String" />
+		<field name="subSkill" type="String" />
+	</model>
+	<model name="com.trantorinc.synergy.skill.core.model.SkillRejectionComment">
+		<field name="commentId" type="long" />
+		<field name="ecode" type="String" />
+		<field name="author" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="createdDate" type="Date" />
+	</model>
+</model-hints>

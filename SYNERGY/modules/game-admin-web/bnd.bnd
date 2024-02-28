@@ -1,0 +1,4 @@
+Bundle-Name: game-admin-web
+Bundle-SymbolicName: com.trantoric.synergy.game.admin.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantoric.synergy.game.admin.web.constants

@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:skill-core:skill-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../skill-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.skill.core"

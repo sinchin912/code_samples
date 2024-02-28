@@ -1,0 +1,10 @@
+Bundle-Name: email-core-api
+Bundle-SymbolicName: com.trantorinc.synergy.email.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.trantorinc.synergy.email.core.exception,\
+	com.trantorinc.synergy.email.core.model,\
+	com.trantorinc.synergy.email.core.service,\
+	com.trantorinc.synergy.email.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../email-core-service/service.xml

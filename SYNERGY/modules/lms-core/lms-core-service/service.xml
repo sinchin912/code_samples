@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.trantorinc.synergy.lms.core">
+	<namespace>LMS</namespace>
+	<entity local-service="true" name="Employee" remote-service="false" uuid="false">
+		<!-- PK fields -->
+		<!-- LMS Sync fields -->
+		<column name="ecode" primary="true" type="String" />
+		<column name="status" type="boolean" />
+		<column name="employeeType" type="String" />
+		<column name="name" type="String" />
+		<column name="doj" type="Date" />
+		<column name="dob" type="Date" />
+		<column name="email" type="String" />
+		<column name="band" type="String" />
+		<column name="designation" type="String" />
+		<column name="manager" type="String" />
+		<column name="reviewer" type="String" />
+		<column name="coordinator" type="String" />
+		<column name="account" type="String" />
+		<column name="project" type="String" />
+		<column name="experience" type="String" />
+		<column name="skill" type="String" />
+		<column name="location" type="String" />
+		<column name="confirmed" type="boolean" />
+		<column name="mobile" type="String" />
+		<column name="fileId" type="String" />
+		<!-- LDAP Sync fields, can these be fetched from LMS too -->
+		<column name="skype" type="String" />
+		<!-- Identifier for LMS entries -->
+		<column name="lmsUser" type="boolean" />
+		<order by="asc">
+			<order-column name="ecode" />
+		</order>
+	</entity>
+
+	<entity local-service="true" name="Holiday" remote-service="false" uuid="false">
+		<column name="holidayId" primary="true" type="long" />
+		<column name="holidayYear" type="int" />
+		<column name="onDate" type="Date" />
+		<column name="name" type="String" />
+	</entity>
+
+	<entity local-service="true" name="Scheduler"  remote-service="false" uuid="false">
+		<column name="schedulerId" primary="true" type="long" />
+		<column name="name" type="String" />
+		<column name="status" type="boolean" />
+		<column name="onDate" type="Date" />
+		<column name="runDate" type="Date" />
+	</entity>
+
+	<entity local-service="true" name="Drive"  remote-service="false" uuid="false">
+		<column name="driveId" primary="true" type="long" />
+		<column name="folderName" type="String" />
+		<column name="folderId" type="String" />
+		<column name="filesCount" type="int" />
+		<column name="updateDate" type="Date" />
+	</entity>
+</service-builder>

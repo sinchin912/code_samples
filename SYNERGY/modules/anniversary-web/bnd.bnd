@@ -1,0 +1,4 @@
+Bundle-Name: anniversary-web
+Bundle-SymbolicName: com.trantorinc.synergy.anniversary.web
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.anniversary.web.constants

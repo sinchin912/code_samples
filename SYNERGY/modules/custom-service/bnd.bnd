@@ -1,0 +1,17 @@
+Bundle-Name: custom-service
+Bundle-SymbolicName: com.trantorinc.synergy.custom.service
+Bundle-Version: 1.0.0
+Export-Package: com.trantorinc.synergy.custom.service.constants,com.trantorinc.synergy.custom.service.task
+Import-Package: \
+ !com.azure.core.credential,\
+ !com.azure.core.http,\
+ !com.azure.core.http.*,\
+ !com.azure.core.util,\
+ !com.azure.identity,\
+ !com.azure.security.keyvault.*,\
+ !com.microsoft.aad.msal4j,\
+ !org.antlr.v4.*,\
+ !org.osgi.service.jdbc,\
+ !reactor.core.publisher,\
+ !org.bouncycastle.*,\
+ *

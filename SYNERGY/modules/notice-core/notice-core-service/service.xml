@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.trantorinc.synergy.notice.core">
+	<namespace>NOTICE</namespace>
+	<!-- 0-initiated,1-hr update, 2-manager approved,3-withdraw initiated,4-abscond ,5-terminate,6 -Retained -->
+	<entity local-service="true" name="Resignation" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="ecode" type="String"  />
+		<column name="account" type="String"  />
+		<column name="managerEmail" type="String"  />
+		<column name="assigneeEmail" type="String"  />
+		<column name="assigneeTo" type="boolean"  />
+		<column name="alternateEmail" type="String"  />
+		<column name="stateName" type="String"  />
+		<column name="cityName" type="String"  />
+		<column name="pincode" type="String"  />
+		<column name="postalAddress" type="String"  />
+		<column name="reason" type="String"  />
+		<column name="lastWorkingDate" type="Date" />
+		<column name="managerSubmissionDate" type="Date" />
+		<column name="hrSubmissionDate" type="Date" />
+		<column name="withdrawInitiatedDate" type="Date" />
+		<column name="abscondTerminateDate" type="Date" />
+		<column name="separationType" type="String"  />
+		<column name="keyToCompany" type="String"  />
+		<column name="keyToProject" type="String"  />
+		<column name="rating" type="String"  />
+		<column name="clientImpact" type="String"  />
+		<column name="keyToRetention" type="String"  />
+		<column name="reasonNonRetention" type="String"  />
+		<column name="employeeComment" type="String"  />
+		<column name="hrComment" type="String" />
+		<column name="managerComment" type="String" />
+		<column name="empWithdrawComment" type="String" />
+		<column name="hrWithdrawComment" type="String" />
+		<column name="reasonForLeaving" type="String"  />
+		<column name="reasonForLeavingByHr" type="String"  />
+		<column name="eligibleForRehire" type="String"  />
+		<column name="otherIssue" type="String"  />
+		<column name="replacementPlan" type="String"  />
+		<column name="replacementDetail" type="String" />
+		<column name="status" type="int"  />
+		<column name="terminationType" type="String"  />
+		<column name="creationDate" type="Date" />
+		<column name="initiatedDate" type="Date" />
+		<column name="mobile" type="String" />
+		<column name="noticePeriod" type="String" />
+		<column name="itAssetsSubmissionDate" type="Date" />
+		<column name="retainEmployeeDate" type="Date"/>
+		<column name="hasLaptop" type="String"  />
+		<column name="hasMouse" type="String"  />
+		<column name="hasCharger" type="String"  />
+		<column name="hasHeadSet" type="String"  />
+		<column name="hasLaptopBag" type="String"  />
+		<column name="hasHomeDesktop" type="String"  />
+		<column name="hasHomeMonitor" type="String"  />
+		<column name="otherAssetsList" type="String" />
+		<column name="exitQuestionnaire" type="boolean"  />
+		<column name="withdrawCount" type="int"  />
+	</entity>
+
+	<entity local-service="true" name="ExitForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="resignationId" type="long" />
+		<column name="managerFormStatus" type="boolean"  />
+		<column name="hrFormStatus" type="boolean"  />
+		<column name="itFormStatus" type="boolean"  />
+		<column name="adminFormStatus" type="boolean"  />
+		<column name="financeFormStatus" type="boolean"  />
+	</entity>
+
+	<entity local-service="true" name="ManagerForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="exitId" type="long" />
+		<column name="ticketNo" type="int"  />
+		<column name="ticketNoRemark" type="String"  />
+		<column name="separationDocument" type="int"  />
+		<column name="separationDocumentRemark" type="String"  />
+		<column name="updatedDate" type="Date" />
+	</entity>
+	<entity local-service="true" name="ItForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="exitId" type="long" />
+		<column name="ticketNo" type="int"  />
+		<column name="ticketNoRemark" type="String"  />
+		<column name="mailPst" type="int"  />
+		<column name="mailPstRemark" type="String"  />
+		<column name="downloadFolder" type="int"  />
+		<column name="downloadFolderRemark" type="String"  />
+		<column name="documentFolder" type="int"  />
+		<column name="documentFolderRemark" type="String"  />
+		<column name="otherData" type="int"  />
+		<column name="otherDataRemark" type="String"  />
+		<column name="googleDrive" type="int"  />
+		<column name="googleDriveRemark" type="String"  />
+		<column name="others" type="int"  />
+		<column name="othersRemark" type="String"  />
+		<column name="mailForwarding" type="int"  />
+		<column name="mailForwardingRemark" type="String"  />
+		<column name="emailDisable" type="int"  />
+		<column name="emailDisableRemark" type="String"  />
+		<column name="systemRecovered" type="int"  />
+		<column name="systemRecoveredRemark" type="String"  />
+		<column name="clientSystemRecovered" type="int"  />
+		<column name="clientSystemRecoveredRemark" type="String"  />
+		<column name="accessCardDisable" type="int"  />
+		<column name="accessCardDisableRemark" type="String"  />
+		<column name="separationDocument" type="int"  />
+		<column name="separationDocumentRemark" type="String"  />
+		<column name="systemRecoveryAmt" type="String"  />
+		<column name="systemRecoveryAmtStatus" type="int"  />
+		<column name="systemRecoveryApproved" type="boolean" />
+		<column name="systemRecoveryComment" type="String"  />
+		<column name="laptopRecoveryAmt" type="String"  />
+		<column name="laptopRecoveryAmtStatus" type="int"  />
+		<column name="laptopRecoveryApproved" type="boolean" />
+		<column name="laptopRecoveryComment" type="String"  />
+		<column name="communicationRecoveryAmt" type="String"  />
+		<column name="communicationRecoveryStatus" type="int"  />
+		<column name="communicationRecoveryApproved" type="boolean" />
+		<column name="communicationRecoveryComment" type="String"  />
+		<column name="headphoneRecoveryAmt" type="String"  />
+		<column name="headphoneRecoveryAmtStatus" type="int"  />
+		<column name="headphoneRecoveryApproved" type="boolean" />
+		<column name="headphoneRecoveryComment" type="String"  />
+		<column name="laptopBagRecoveryAmt" type="String"  />
+		<column name="laptopBagRecoveryAmtStatus" type="int"  />
+		<column name="laptopBagRecoveryApproved" type="boolean" />
+		<column name="laptopBagRecoveryComment" type="String"  />
+		<column name="monitorRecoveryAmt" type="String"  />
+		<column name="monitorRecoveryAmtStatus" type="int"  />
+		<column name="monitorRecoveryApproved" type="boolean" />
+		<column name="monitorRecoveryComment" type="String"  />
+		<column name="chargerRecoveryAmt" type="String"  />
+		<column name="chargerRecoveryAmtStatus" type="int"  />
+		<column name="chargerRecoveryApproved" type="boolean" />
+		<column name="chargerRecoveryComment" type="String"  />
+		<column name="mouseRecoveryAmt" type="String"  />
+		<column name="mouseRecoveryAmtStatus" type="int"  />
+		<column name="mouseRecoveryApproved" type="boolean" />
+		<column name="mouseRecoveryComment" type="String"  />
+		<column name="updatedDate" type="Date" />
+	</entity>
+	<entity local-service="true" name="AdminForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="exitId" type="long" />
+		<column name="stationaryRecoveryAmt" type="String"  />
+		<column name="stationaryRecoveryAmtStatus" type="int"  />
+		<column name="stationaryRecoveryApproved" type="boolean" />
+		<column name="stationaryRecoveryComment" type="String"  />
+		<column name="keysRecoveryAmt" type="String"  />
+		<column name="keysRecoveryAmtStatus" type="int"  />
+		<column name="keyRecoveryApproved" type="boolean" />
+		<column name="keyRecoveryComment" type="String"  />
+		<column name="libraryRecoveryAmt" type="String"  />
+		<column name="libraryRecoveryAmtStatus" type="int"  />
+		<column name="libraryRecoveryApproved" type="boolean" />
+		<column name="libraryRecoveryComment" type="String"  />
+		<column name="sportsRecoveryAmt" type="String"  />
+		<column name="sportsRecoveryAmtStatus" type="int"  />
+		<column name="sportsRecoveryApproved" type="boolean" />
+		<column name="sportsRecoveryComment" type="String"  />
+		<column name="infraRecoveryAmt" type="String"  />
+		<column name="infraRecoveryAmtStatus" type="int"  />
+		<column name="infraRecoveryApproved" type="boolean" />
+		<column name="infraRecoveryComment" type="String"  />
+		<column name="lunchRecoveryAmt" type="String"  />
+		<column name="lunchRecoveryAmtStatus" type="int"  />
+		<column name="lunchRecoveryApproved" type="boolean" />
+		<column name="lunchRecoveryComment" type="String"  />
+		<column name="accessCardRecoveryAmt" type="String"  />
+		<column name="accessCardRecoveryAmtStatus" type="int"  />
+		<column name="accessCardRecoveryApproved" type="boolean" />
+		<column name="accessCardRecoveryComment" type="String"  />
+		<column name="identityCardRecoveryAmt" type="String"  />
+		<column name="identityCardRecoveryStatus" type="int"  />
+		<column name="identityCardRecoveryApproved" type="boolean" />
+		<column name="identityCardRecoveryComment" type="String"  />
+		<column name="updatedDate" type="Date" />
+	</entity>
+	<entity local-service="true" name="FinanceForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="exitId" type="long" />
+		<column name="lastSalaryPaidDays" type="long"  />
+		<column name="lastSalaryPaidMonth" type="String"  />
+		<column name="lastSalaryPaidYear" type="String"  />
+		<column name="taxProofStatus" type="int"  />
+		<column name="taxProofRemark" type="String"  />
+		<column name="foodReimbursementStatus" type="int"  />
+		<column name="foodReimbursementAmt" type="String"  />
+		<column name="travelRecoveryAmt" type="String"  />
+		<column name="travelRecoveryStatus" type="int"  />
+		<column name="travelRecoveryApproved" type="boolean" />
+		<column name="travelRecoveryComment" type="String"  />
+		<column name="hotelRecoveryAmt" type="String"  />
+		<column name="hotelRecoveryStatus" type="int"  />
+		<column name="hotelRecoveryApproved" type="boolean" />
+		<column name="hotelRecoveryComment" type="String"  />
+		<column name="internationalRecoveryAmt" type="String"  />
+		<column name="internationalRecoveryStatus" type="int"  />
+		<column name="internationalRecoveryApproved" type="boolean" />
+		<column name="internationalRecoveryComment" type="String"  />
+		<column name="educationRecoveryAmt" type="String"  />
+		<column name="educationRecoveryStatus" type="int"  />
+		<column name="educationRecoveryApproved" type="boolean" />
+		<column name="educationRecoveryComment" type="String"  />
+		<column name="joiningBonusRecoveryAmt" type="String"  />
+		<column name="joiningBonusRecoveryStatus" type="int"  />
+		<column name="joiningRecoveryApproved" type="boolean" />
+		<column name="joiningRecoveryComment" type="String"  />
+		<column name="noticePeriodRecoveryAmt" type="String"  />
+		<column name="noticePeriodRecoveryStatus" type="int"  />
+		<column name="noticePeriodRecoveryApproved" type="boolean" />
+		<column name="noticePeriodRecoveryComment" type="String"  />
+		<column name="updatedDate" type="Date" />
+	</entity>
+	<entity local-service="true" name="HrForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="exitId" type="long" />
+		<column name="foodOption" type="long"  />
+		<column name="foodOptionRemark" type="String"  />
+		<column name="inductionFeedbackStatus" type="int"  />
+		<column name="inductionFeedbackRemark" type="String"  />
+		<column name="inductionQuizStatus" type="int"  />
+		<column name="inductionQuizRemark" type="String"  />
+		<column name="trainingFeedbackStatus" type="int"  />
+		<column name="trainingFeedbackRemark" type="String"  />
+		<column name="exitInterviewStatus" type="int"  />
+		<column name="exitInterviewRemark" type="String"  />
+		<column name="employeeDirectoryStatus" type="int"  />
+		<column name="employeeDirectoryRemark" type="String"  />
+		<column name="lmsStatus" type="int"  />
+		<column name="lmsRemark" type="String"  />
+		<column name="vantageCircleStatus" type="int"  />
+		<column name="vantageCircleRemark" type="String"  />
+		<column name="birthdaySynergyStatus" type="int"  />
+		<column name="birthdaySynergyRemark" type="String"  />
+		<column name="experienceLetterStatus" type="int"  />
+		<column name="experienceLetterRemark" type="String"  />
+		<column name="ndaFormStatus" type="int"  />
+		<column name="ndaFormRemark" type="String"  />
+		<column name="separationDocumentStatus" type="int"  />
+		<column name="separationDocumentRemark" type="String"  />
+		<column name="trainingAgreementAmt" type="String"  />
+		<column name="trainingAgreementStatus" type="int"  />
+		<column name="recoverableBonusAmt" type="String"  />
+		<column name="recoverableBonusStatus" type="int"  />
+		<column name="noticePeriodRecoveryAmt" type="String"  />
+		<column name="noticePeriodRecoveryStatus" type="int"  />
+		<column name="leavesMonth1" type="String"  />
+		<column name="leaveDaysMonth1" type="String"  />
+		<column name="leaveDateMonth1" type="String"  />
+		<column name="leavesMonth2" type="String"  />
+		<column name="leaveDaysMonth2" type="String"  />
+		<column name="leaveDateMonth2" type="String"  />
+		<column name="leavesMonth3" type="String"  />
+		<column name="leaveDaysMonth3" type="String"  />
+		<column name="leaveDateMonth3" type="String"  />
+		<column name="lopMonth1" type="String"  />
+		<column name="lopDaysMonth1" type="String"  />
+		<column name="lopDateMonth1" type="String"  />
+		<column name="lopMonth2" type="String"  />
+		<column name="lopDaysMonth2" type="String"  />
+		<column name="lopDateMonth2" type="String"  />
+		<column name="lopMonth3" type="String"  />
+		<column name="lopDaysMonth3" type="String"  />
+		<column name="lopDateMonth3" type="String"  />
+		<column name="earnedLeaveBalance" type="String"  />
+		<column name="hrRemark" type="String"  />
+		<column name="updatedDate" type="Date" />
+	</entity>
+	<entity local-service="true" name="ExitState" remote-service="false" uuid="false">
+		<column name="exitStateId" primary="true" type="long" />
+		<column name="exitStateKey" type="int" />
+		<column name="exitStateDescription" type="String"  />
+		<column name="exitStateDisplay" type="String"  />
+	</entity>
+	<entity local-service="true" name="QuestionnaireForm" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="resignationId" type="long" />
+		<column name="workExperience" type="String" />
+		<column name="communicationWithEmployees" type="String" />
+		<column name="trainingOpportunity" type="String" />
+		<column name="dealingWithStaff" type="String" />
+		<column name="satisfactionLevel" type="String" />
+		<column name="reasonForLeaving" type="String"  />
+		<column name="reasonForLeavingDescribe" type="String"  />
+		<column name="reasonForJoining" type="String"  />
+		<column name="workAgain" type="int" />
+		<column name="notWorkAgain" type="String" />
+		<column name="recommendTrantor" type="int" />
+		<column name="notRecommendTrantor" type="String" />
+		<column name="companyName" type="String" />
+		<column name="companyDetails" type="String" />
+		<column name="designation" type="String" />
+		<column name="location  " type="String" />
+		<column name="salaryHike" type="String" />
+		<column name="feedback " type="String" />
+		<column name="hrRemark" type="String"  />
+		<column name="submittedDate" type="Date" />
+	</entity>
+	<entity local-service="true" name="RecoveryReimbursement" remote-service="false" uuid="false">
+		<column name="id" primary="true" type="long" />
+		<column name="departmentFormId" type="long" />
+		<column name="department" type="int"  /> <!--1 manager, 2 IT, 3 admin, 4 Finance, 5 HR -->
+		<column name="recoveryType" type="boolean"  />
+		<column name="recoveryItem" type="String"  />
+		<column name="recoveryAmount" type="String"  />
+		<column name="recoveryStatus" type="int"  />
+		<column name="reimbursementItem" type="String"  />
+		<column name="reimbursementAmount" type="String"  />
+		<column name="reimbursementStatus" type="int"  />
+		<column name="approved" type="boolean" />
+		<column name="comment" type="String"  />
+	</entity>
+</service-builder>

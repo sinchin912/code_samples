@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:game-core:game-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../game-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.game.core"

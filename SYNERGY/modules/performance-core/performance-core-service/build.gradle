@@ -1,0 +1,12 @@
+dependencies {
+	compile project(":modules:performance-core:performance-core-api")
+	compileOnly project(":modules:common-service")
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+
+}
+
+buildService {
+	apiDir = "../performance-core-api/src/main/java"
+}
+
+group = "com.trantorinc.synergy.performance.core"
