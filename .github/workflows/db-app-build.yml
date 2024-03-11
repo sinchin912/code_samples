@@ -1,0 +1,34 @@
+name: Build
+on:
+  push:
+    branches:
+      - graphql_poc
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "frontend/**"
+jobs:
+  sonarcloud_app:
+    name: SonarCloud for APP
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend/
+    steps:
+      - name: Checkout frontend
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Install Dependencies for frontend
+        run: yarn
+      - name: Run tests for frontend
+        run: yarn test --coverage
+      - name: Debug List files in frontend directory
+        run: ls -la
+      - name: SonarCloud Scan for frontend
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: frontend
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONTEND }}

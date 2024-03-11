@@ -1,0 +1,41 @@
+type Table {
+  name: String
+  schema: String
+  type: String
+}
+
+type TableHeader {
+  name: String
+  type: String
+}
+
+type TableData {
+  name: String!
+  type: String!
+  value: String!
+}
+
+type PaginationMetadata {
+  nextPage: Boolean
+  totalRecords: Int
+}
+
+type PaginatedTableData {
+  data: [[TableData]]
+  pagination: PaginationMetadata
+}
+
+type Query {
+  list: [Table]
+  headers(tableName: String!): [TableHeader]
+  rows(tableName: String!, limit: Int, offset: Int): PaginatedTableData
+}
+
+type Mutation {
+  addData(tableName: String, columnNames: String, columnValues: String): String
+  updateData(
+    tableName: String!
+    updateValue: String!
+    condition: String!
+  ): String
+}

@@ -1,0 +1,37 @@
+name: Build
+on:
+  push:
+    branches:
+      - graphql_poc
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "db-api/**"
+jobs:
+  sonarcloud_api:
+    name: SonarCloud for API
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./db-api/
+    steps:
+      - name: Checkout db-api
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Install Dependencies for db-api
+        run: yarn
+      - name: Run tests for db-api
+        run: yarn test --coverage
+      - name: Debug List files in db-api directory
+        run: ls -la
+      - name: SonarCloud Scan for db-api
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: db-api
+          args: >
+            -Dsonar.verbose=true
+            -Dsonar.scm.disabled=false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
