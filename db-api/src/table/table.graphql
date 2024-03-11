@@ -1,0 +1,24 @@
+type Table {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateTableInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateTableInput {
+  id: Int!
+}
+
+type Query {
+  table: [Table]!
+  table(id: Int!): Table
+}
+
+type Mutation {
+  createTable(createTableInput: CreateTableInput!): Table!
+  updateTable(updateTableInput: UpdateTableInput!): Table!
+  removeTable(id: Int!): Table
+}
